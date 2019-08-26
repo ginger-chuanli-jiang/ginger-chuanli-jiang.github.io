@@ -1,20 +1,29 @@
-# Deep Learning Machine Setup
+# Deep Learning Workstations
 
-## Ubuntu Installation
+## Why investing my own deep learning workstation?
+The nature of deep learning determines that researchers and practioners spend lots of their time on experimentation and iteration. Cloud computing provides fast, secure, and scalable solutions for companies. However, for deep learning enthusiasts, for long-term, owing a deep learning workstation is more cost-efficient than cloud computing solutions. 
+
+## Where to buy workstations?
+A year ago, I spent about 4,500 dollars to purchase my own deep learning workstation from the following website and I have no regrets. I used the following steps to set up my machine. 
+
+https://mitxpc.com/collections/deep-learning/workstations
+
+## how to set up your workstation?
+
+### Ubuntu
 
 Version: 18.04.2
-Host Name: mitxpc
+https://help.ubuntu.com/lts/installation-guide/index.html
 
-### Network Setup with Stack IPs
+### Network with Static IPs
 
 ```bash
 $ sudo apt update
 $ sudo apt install openssh-server
-$ sudo vim /etc/ssh/sshd_config # Change port to 1022
-
+$ sudo vim /etc/ssh/sshd_config
 $ cat /etc/netplan/01-network-manager-all.yaml
 
-# Let NetworkManager manage all devices on this system
+# Allow NetworkManager manage all devices on this system
 network:
   version: 2
   # renderer: NetworkManager
@@ -31,9 +40,9 @@ network:
 $ sudo netplan apply
 ```
 
-### Install/Update Deb Packages
+### Deb
 
-#### Common Packages
+#### common packages
 
 ```bash
 $ sudo apt update
@@ -43,15 +52,13 @@ $ sudo apt install kile texlive
 $ sudo apt autoremove
 ```
 
-#### Common Setup
-
 ```bash
 $ sudo apt install xclip
 $ sudo dpkg -i common-setup_1.0.16_all.deb
 # After installation, empty the file ${User}/.bashrc.
 ```
 
-#### Python Packages
+#### Python
 
 ```bash
 $ sudo apt update
@@ -73,26 +80,16 @@ $ sudo apt update
 $ sudo apt install docker-ce
 ```
 
-#### Other Packages
-
-```bash
-$ sudo apt update
-$ sudo apt install kile texlive
-```
-
 ### Add Users
 
 ```bash
-$ sudo adduser --system --home=/home/chjiang --shell=/bin/bash chjiang
-$ sudo usermod -aG sudo,docker chjiang
-$ sudo usermod -aG docker zhwang
+$ sudo adduser --system --home=/home/ginger --shell=/bin/bash ginger
+$ sudo usermod -aG sudo,docker ginger
 ```
 
 ## Deep Learning Frameworks
 
 ### CUDA
-
-Download CUDA Toolkit 10.1 Update 1 Download.
 
 ```bash
 $ sudo apt install cuda-repo-ubuntu1804-10-1-local-10.1.168-418.67_1.0-1_amd64.deb
