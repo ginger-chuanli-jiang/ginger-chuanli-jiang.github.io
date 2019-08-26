@@ -8,7 +8,7 @@ A year ago, I spent about 4,500 dollars to purchase my own deep learning worksta
 
 https://mitxpc.com/collections/deep-learning/workstations
 
-## how to set up your workstation?
+## How to set up your workstation?
 
 ### Ubuntu
 
