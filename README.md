@@ -23,20 +23,6 @@ $ sudo apt install openssh-server
 $ sudo vim /etc/ssh/sshd_config
 $ cat /etc/netplan/01-network-manager-all.yaml
 
-# Allow NetworkManager manage all devices on this system
-network:
-  version: 2
-  # renderer: NetworkManager
-  renderer: networkd
-  ethernets:
-    enp0s31f6:
-      dhcp4: no
-      dhcp6: no
-      addresses: [50.208.213.27/29, ]
-      gateway4:  50.208.213.30
-      nameservers:
-        addresses: [8.8.8.8, 8.8.4.4]
-
 $ sudo netplan apply
 ```
 
