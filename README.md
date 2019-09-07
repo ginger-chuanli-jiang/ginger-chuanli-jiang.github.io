@@ -1,3 +1,5 @@
+# Note about Random Forest
+
 Ensemble classification is an application of ensemble learning to improve the accuracy of classification. Ensemble learning is a machine learning approach to solve a prediction problem by using multiple models. In ensemble classification, multiple classifiers are used to achieve better accuracy than the individual classifier in the ensemble. A voting scheme is then used to determine the final class label for prediction. 
 
 A simple but effective voting scheme is majority voting (Lam and Suen, 1997). In majority voting, each classifer in the ensemble is used to predict the class label, then the class that receives the greatest number of votes is returned as the final decision of the ensemble.
