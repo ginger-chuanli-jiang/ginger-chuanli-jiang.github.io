@@ -1,4 +1,4 @@
-# Deep Learning Workstations
+# How to Set Up Your Own Deep Learning Workstations
 
 ## Why investing my own deep learning workstation?
 The nature of deep learning determines that researchers and practioners spend lots of their time on experimentation and iteration. Cloud computing provides fast, secure, and scalable solutions for companies. However, for deep learning enthusiasts, for long-term, owing a deep learning workstation is more cost-efficient than cloud computing solutions. 
