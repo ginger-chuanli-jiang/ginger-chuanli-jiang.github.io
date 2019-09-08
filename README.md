@@ -1,12 +1,17 @@
 # Note about Random Forest
 
+### Ensemble Classification:
+
 Ensemble classification is an application of ensemble learning to improve the accuracy of classification. Ensemble learning is a machine learning approach to solve a prediction problem by using multiple models. In ensemble classification, multiple classifiers are used to achieve better accuracy than the individual classifier in the ensemble. A voting scheme is then used to determine the final class label for prediction. 
 
+## Voting:
 A simple but effective voting scheme is majority voting (Lam and Suen, 1997). In majority voting, each classifer in the ensemble is used to predict the class label, then the class that receives the greatest number of votes is returned as the final decision of the ensemble.
 
 An alternative voting scheme is veto voting (Shahzad &amp; Lavesson, 2012; Sun &amp; Dance, 2012). In veto voting, one single classifier vetoes the final decision of other classifiers. 
 
 Trust-based veto voting is an extention of veto voting scheme (Shahazad and lavesson 2013). In trust-based veto voting, the trust (weights) of each classifier is used to determine whether one single classifier or a set of classifiers can veto the final decision. 
+
+## Boosting, Bagging, Stacking:
 
 Ensemble learning usually includes three approaches to aggregate final decisions, they are boosting, bagging, and stacking. 
 
@@ -15,6 +20,8 @@ Boosting is an incremental process of building a sequence of classifiers, where 
 Bagging is a bootstrap aggregating process of building each classifer in the ensemble using a randomly drawn sample of the samples, having each classifier contributes equally to the final class label (Breiman, 1996). Random Forest (RF, Breiman, 2001) is the main representative of bagging. Bagging is robust than boosting against overfitting.  
 
 Stacking is an extendtion of cross-validation technique, where the data set is partititioned into a held-in data set and held-out data set, and the held-in data is used to train the models, and the best performing model is selected on the held-out data for prediction. 
+
+## Random Forest:
 
 Random Forest is an ensemble learning method used for classification and regression. It combines Breiman's bagging sampling approach and the random feature selections originated by Ho 1995 and 1998. In the original paper on RF, Breiman showed that the RF error rate depends on correlation and strength. Increasing the correlation between any two trees in the RF increases the forest error rate. Increasing the strength of the individual trees decreases the RF error rate.
 
@@ -26,7 +33,7 @@ Several studies have replaced Breiman's majority voting with weighted voting, mo
 
 Online random forest was developed by Saffari et al., 2009. The on-line RF has to combine on-line bagging and on-line decision trees with random feature-selection.
 
-###References
+### References:
 
 Kahled Fawagreh, Mohamded, Medhat Gaber, Eyad Elya
 RF: From Early Developments to Recent Advancements
