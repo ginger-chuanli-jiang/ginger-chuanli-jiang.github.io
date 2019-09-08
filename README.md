@@ -1,4 +1,4 @@
-# Note about Random Forest
+# Notes about Random Forest
 
 ### Ensemble Classification:
 
