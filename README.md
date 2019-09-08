@@ -4,13 +4,13 @@ Ensemble classification is an application of ensemble learning to improve the ac
 
 A simple but effective voting scheme is majority voting (Lam and Suen, 1997). In majority voting, each classifer in the ensemble is used to predict the class label, then the class that receives the greatest number of votes is returned as the final decision of the ensemble.
 
-An alternative voting scheme is veto voting (Shahzad & Lavesson, 2012; Sun & Dance, 2012). In veto voting, one single classifier vetoes the final decision of other classifiers. 
+An alternative voting scheme is veto voting (Shahzad &amp; Lavesson, 2012; Sun &amp; Dance, 2012). In veto voting, one single classifier vetoes the final decision of other classifiers. 
 
 Trust-based veto voting is an extention of veto voting scheme (Shahazad and lavesson 2013). In trust-based veto voting, the trust (weights) of each classifier is used to determine whether one single classifier or a set of classifiers can veto the final decision. 
 
 Ensemble learning usually includes three approaches to aggregate final decisions, they are boosting, bagging, and stacking. 
 
-Boosting is an incremental process of building a sequence of classifiers, where each classifier works on the incorrectly classified instances of the previous one in the sequence. AdaBoost (Freund & Schapire, 1997) is the representative of this class of techniques. AdaBoost is prone to overfitting. 
+Boosting is an incremental process of building a sequence of classifiers, where each classifier works on the incorrectly classified instances of the previous one in the sequence. AdaBoost (Freund &amp; Schapire, 1997) is the representative of this class of techniques. AdaBoost is prone to overfitting. 
 
 Bagging is a bootstrap aggregating process of building each classifer in the ensemble using a randomly drawn sample of the samples, having each classifier contributes equally to the final class label (Breiman, 1996). Random Forest (RF, Breiman, 2001) is the main representative of bagging. Bagging is robust than boosting against overfitting.  
 
@@ -25,6 +25,8 @@ Key advantages of RF over its Adaboost counterpart are robustness to noise and o
 Several studies have replaced Breiman's majority voting with weighted voting, more sophisticated dynamic integration techniques such as Dynamic Selection, Dynamic Voting, and Dynamic Voting with Selection, and hybrid algorithm. 
 
 Online random forest was developed by Saffari et al., 2009. The on-line RF has to combine on-line bagging and on-line decision trees with random feature-selection.
+
+###References
 
 Kahled Fawagreh, Mohamded, Medhat Gaber, Eyad Elya
 RF: From Early Developments to Recent Advancements
