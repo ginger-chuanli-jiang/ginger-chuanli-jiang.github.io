@@ -27,6 +27,8 @@ Random Forest is an ensemble learning method used for classification and regress
 
 Specifically, suppose we have N training samples, and M features. First, we do bootstrapping sampling N times to select N samples, then for each node, we randomly select features (the number of features should be less than the total number of features). Determine the best spliting based on Gini index and cross entropy. Each tree is allowed to grow without any pruning. 
 
+Mean feature importance can be calculated in RF by averaging the gini decreases for each individual feature over all trees in the forest. This metric, however, can be unreliable. Permutation importance is therefore computed by calculating the difference between a baseline accuracy (classification) or R2 (regressor) and the drop in overall accuracy or R2 by permuting the feature.
+
 Key advantages of RF over its Adaboost counterpart are robustness to noise and overfitting. RF is very fast in both training and classification. Second, RF can be easy parallelized, which makes it interesting for multi-core and GPU implementations. RF is suitable for multi-class prediction.
 
 Several studies have replaced Breiman's majority voting with weighted voting, more sophisticated dynamic integration techniques such as Dynamic Selection, Dynamic Voting, and Dynamic Voting with Selection, and hybrid algorithm. 
