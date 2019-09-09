@@ -1,5 +1,19 @@
 # Notes about Random Forests
 
+### Random Forest:
+
+Random Forest is an ensemble learning method used for classification and regression. It combines Breiman's bagging sampling approach and the random feature selections originated by Ho 1995 and 1998. In the original paper on RF, Breiman showed that the RF error rate depends on correlation and strength. Increasing the correlation between any two trees in the RF increases the forest error rate. Increasing the strength of the individual trees decreases the RF error rate.
+
+Specifically, suppose we have N training samples, and M features. First, we do bootstrapping sampling N times to select N samples, then for each node, we randomly select features (the number of features should be less than the total number of features). Determine the best spliting based on Gini index and cross entropy. Each tree is allowed to grow without any pruning. 
+
+Mean feature importance can be calculated in RF by averaging the gini decreases for each individual feature over all trees in the forest. This metric, sometimes, can be unreliable. Permutation importance can therefore be computed by calculating the difference between a baseline accuracy (classification) or R2 (regressor) and the drop in overall accuracy or R2 by permuting the feature.
+
+Key advantages of RF over its Adaboost counterpart are robustness to noise and overfitting. RF is very fast in both training and classification. Second, RF can be easy parallelized, which makes it interesting for multi-core and GPU implementations. RF is suitable for multi-class prediction.
+
+Several studies have replaced Breiman's majority voting with weighted voting, more sophisticated dynamic integration techniques such as Dynamic Selection, Dynamic Voting, and Dynamic Voting with Selection, and hybrid algorithm. 
+
+Online random forest was developed by Saffari et al., 2009. The on-line RF has to combine on-line bagging and on-line decision trees with random feature-selection.
+
 ### Ensemble Classification:
 
 Ensemble classification is an application of ensemble learning to improve the accuracy of classification. Ensemble learning is a machine learning approach to solve a prediction problem by using multiple models. In ensemble classification, multiple classifiers are used to achieve better accuracy than the individual classifier in the ensemble. A voting scheme is then used to determine the final class label for prediction. 
@@ -20,20 +34,6 @@ Boosting is an incremental process of building a sequence of classifiers, where 
 Bagging is a bootstrap aggregating process of building each classifer in the ensemble using a randomly drawn sample of the samples, having each classifier contributes equally to the final class label (Breiman, 1996). Random Forest (RF, Breiman, 2001) is the main representative of bagging. Bagging is robust than boosting against overfitting.  
 
 Stacking is an extendtion of cross-validation technique, where the data set is partititioned into a held-in data set and held-out data set, and the held-in data is used to train the models, and the best performing model is selected on the held-out data for prediction. 
-
-### Random Forest:
-
-Random Forest is an ensemble learning method used for classification and regression. It combines Breiman's bagging sampling approach and the random feature selections originated by Ho 1995 and 1998. In the original paper on RF, Breiman showed that the RF error rate depends on correlation and strength. Increasing the correlation between any two trees in the RF increases the forest error rate. Increasing the strength of the individual trees decreases the RF error rate.
-
-Specifically, suppose we have N training samples, and M features. First, we do bootstrapping sampling N times to select N samples, then for each node, we randomly select features (the number of features should be less than the total number of features). Determine the best spliting based on Gini index and cross entropy. Each tree is allowed to grow without any pruning. 
-
-Mean feature importance can be calculated in RF by averaging the gini decreases for each individual feature over all trees in the forest. This metric, however, can be unreliable. Permutation importance is therefore computed by calculating the difference between a baseline accuracy (classification) or R2 (regressor) and the drop in overall accuracy or R2 by permuting the feature.
-
-Key advantages of RF over its Adaboost counterpart are robustness to noise and overfitting. RF is very fast in both training and classification. Second, RF can be easy parallelized, which makes it interesting for multi-core and GPU implementations. RF is suitable for multi-class prediction.
-
-Several studies have replaced Breiman's majority voting with weighted voting, more sophisticated dynamic integration techniques such as Dynamic Selection, Dynamic Voting, and Dynamic Voting with Selection, and hybrid algorithm. 
-
-Online random forest was developed by Saffari et al., 2009. The on-line RF has to combine on-line bagging and on-line decision trees with random feature-selection.
 
 ### References:
 
